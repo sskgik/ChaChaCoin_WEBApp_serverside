@@ -1,0 +1,72 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "BrockChain Explorer";
+    Layout = "_Layout2";
+}
+
+
+<style>
+    .jumbotron {
+        height: 180vh;
+        margin-bottom: 60px;
+        margin-top: -15px;
+        background-image: url(../image/background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+</style>
+<link rel="stylesheet" href="~/css/DemoChaChaApp.css" />
+<script src="~/js/DemoChaChaApp.js" asp-append-version="true"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--Page Layout-->
+<div class="Demoimage">
+    <div class="ChaChaMobileDemo">
+        <div class="Balance">
+            <button class="balancebutton" type="button" onclick="get_balance()" name="qrreaderbottun">
+                <p class="content1">Your_Balance</p>
+                <p class="content2" id="content2">&nbsp;</p>
+                <p class="content1">ChaChaCoin</p>
+            </button>
+        </div>
+        <div class="ChaChaCoin">
+            <img src="~/image/DemoChaCha.png" width="90" height="90" alt="ChaChaCoinの画像">
+        </div>
+        <!--入力フォーム-->
+        <div class="sendinfomation">
+            <form id="inputform" name="scanresult">
+                <p class="input">送金先</p>
+                <textarea id="deistination" type="text" name="Destinationpubkey" placeholder="Destination PublicKey"></textarea>
+                <p class="input">送金枚数</p>
+                <textarea id="amount1" type="text" name="Amount" placeholder="amount"></textarea>
+            </form>
+        </div>
+        <!--各種button-->
+        <div class="button">
+            <input id="clearbutton" type="button" onclick="clearinput()" value="Clear Input(消去)">
+            <input id="sendbutton" type="button" onclick="send()" value="Send(送金)">
+        </div>
+        <!--Reacent transaction-->
+        <p class="showtransaction">Recent&nbsp;&nbsp;Transaction</p>
+        <!--Recrnt Table-->
+        <table id="recent">
+            <tbody id="recentTable">
+                <tr>
+                    <td id="date">Send_Date</td>
+                    <td id="amount">Amount</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--largeQR image-->
+    <div class="ChaChaMobileDemoQR">
+        <div class="ChaChaCoin">
+            <img src="~/image/DemoChaCha.png" width="90" height="90" alt="ChaChaCoinの画像">
+        </div>
+
+        <div id="lergeqr"><img src="~/image/chachaQR.png" alt="ChaChaCoinの画像"></div>
+        <input class="storageclear" type="button" onclick="localclear()" value="ローカルクリア">
+    </div>
+</div>

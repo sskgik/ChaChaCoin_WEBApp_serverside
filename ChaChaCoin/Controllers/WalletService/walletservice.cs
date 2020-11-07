@@ -9,6 +9,7 @@
     using Miyabi.ClientSdk;
     using Miyabi.Common.Models;
     using Miyabi.Cryptography;
+    using System.Diagnostics;
 
 
     /// <summary>
@@ -31,7 +32,7 @@
             var generalApi = new GeneralApi(client);
             var from = myaddress;
             var to = opponetaddress;
-
+           
             // enter the send amount
             var moveCoin = new AssetMove(TableName, amount, from, to);
             var tx = TransactionCreator.SimpleSignedTransaction(
@@ -59,7 +60,7 @@
                 var value = PublicKey.Parse(publickey);
                 myaddress = new PublicKeyAddress(value);
             }
-            catch(Exception e)
+            catch (Exception)
             {
                 return 0m;
             }
@@ -134,12 +135,12 @@
         /// <returns></returns>
         public KeyPair GetKeyPair(string privateKey)
         {
-            PrivateKey adminPrivateKey = null;
+            PrivateKey adminPrivateKey;
             try
             {
                  adminPrivateKey = PrivateKey.Parse(privateKey);
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 //失敗のHTTPリクエストを投げるようにする
                 return null;

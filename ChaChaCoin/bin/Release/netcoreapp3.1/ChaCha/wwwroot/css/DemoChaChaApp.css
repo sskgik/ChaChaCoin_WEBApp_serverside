@@ -1,0 +1,176 @@
+﻿.Demoimage {
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-left:-15px; 
+}
+
+.ChaChaMobileDemo {
+    background-color: black;
+    position: relative;
+    margin-bottom:20px;
+    width: 330px;
+    height: 600px;
+}
+/*balance*/
+.Balance {
+    position: relative;
+    left: 15px;
+    top: 10px;
+}
+
+.balancebutton {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    width: 200px;
+    height: 100px;
+    font-size: 140%;
+}
+
+p.content1 {
+    color: white;
+    line-height: 5px;
+    text-align: center;
+    font-size: 100%;
+}
+
+p.content2 {
+    color: white;
+    line-height: 15px;
+    text-align: center;
+    font-size: 90%;
+}
+
+/*ChaCha_img*/
+.ChaChaCoin {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/*input infomation*/
+.sendinfomation {
+    position: absolute;
+    top: 120px;
+    left:5px;
+}
+
+p.input {
+    color: yellow;
+    line-height: 10px;
+    font-size: 110%;
+}
+
+#deistination {
+    width: 320px;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 100%;
+}
+
+#amount1 {
+    width: 320px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 100%;
+}
+/*ここまでが入力欄*/
+
+/*ボタン位置と形(sendbuttonまで一塊)*/
+.button {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 280px;
+    text-align: center;
+}
+
+/*リクエストボタン*/
+#clearbutton {
+    position: relative;
+    width: 145px;
+    height: 45px;
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: auto;
+    background-color: white;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+}
+/*sendボタン*/
+#sendbutton {
+    position: relative;
+    width: 145px;
+    height: 45px;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: auto;
+    background-color: greenyellow;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+}
+/*ここまでで一塊*/
+/*showtransaction*/
+p.showtransaction {
+    position: absolute;
+    color: white;
+    top:  340px;
+    left:5px;
+    font-size: 120%;
+}
+
+#recent {
+    position: absolute;
+    color: white;
+    top:  360px;
+    left:5px;
+    font-size: 115%;
+    text-align: left;
+}
+
+td {
+    height: 40px;
+}
+
+#date {
+    width: 210px;
+}
+
+#amount {
+    width: 120px;
+}
+/*QRImageFlame*/
+.ChaChaMobileDemoQR {
+    background-color: black;
+    position: relative;
+    margin-left: 2px;
+    width: 330px;
+    height: 600px;
+}
+
+#lergeqr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+/*clear local storage*/
+.storageclear {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    width: 171px;
+    height: 60px;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 5px;
+    background-color: yellow;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+}
